@@ -15,4 +15,8 @@
     <ProjectReference Include="..\OBI.Business\OBI.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
 </Project>

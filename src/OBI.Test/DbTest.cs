@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OBI.Business.Models;
-using OBI.Data.Repository;
+using OBI.Data.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OBI.Data.Repository
+namespace OBI.Data.Context
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> options) 
+        public MyDbContext(DbContextOptions<MyDbContext> options)
             : base(options)
-        {}
+        { }
 
         public DbSet<User> Users { get; set; }
     }
