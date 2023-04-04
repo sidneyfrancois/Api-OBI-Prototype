@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace OBI.Data.Repository
 {
-    public class UserRepository : DbContext
+    public class MyDbContext : DbContext
     {
-        public UserRepository(DbContextOptions<UserRepository> options) 
+        public MyDbContext(DbContextOptions<MyDbContext> options) 
             : base(options)
         {}
 

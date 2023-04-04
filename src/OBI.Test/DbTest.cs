@@ -11,16 +11,16 @@ namespace OBI.Test
 {
     public class DbTest
     {
-        private static DbContextOptions<UserRepository> options = new DbContextOptionsBuilder<UserRepository>()
+        private static DbContextOptions<MyDbContext> options = new DbContextOptionsBuilder<MyDbContext>()
             .UseInMemoryDatabase(databaseName: "UserDbTest")
             .Options;
 
-        UserRepository context;
+        MyDbContext context;
 
         [OneTimeSetUp]
         public void Setup()
         {
-            context = new UserRepository(options);
+            context = new MyDbContext(options);
             context.Database.EnsureCreated();
 
             SeedDatabase();
