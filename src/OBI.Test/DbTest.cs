@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OBI.Business.Models;
 using OBI.Data.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace OBI.Test
 {
     public class DbTest
     {
-        private static DbContextOptions<UserRepository> dbContextOptions = new DbContextOptionsBuilder<UserRepository>()
+        private static DbContextOptions<UserRepository> options = new DbContextOptionsBuilder<UserRepository>()
             .UseInMemoryDatabase(databaseName: "UserDbTest")
             .Options;
 
@@ -19,7 +20,41 @@ namespace OBI.Test
         [OneTimeSetUp]
         public void Setup()
         {
+            context = new UserRepository(options);
+            context.Database.EnsureCreated();
 
+            SeedDatabase();
+        }
+
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            context.Database.EnsureDeleted();
+        }
+
+        private void SeedDatabase()
+        {
+            var users = new List<User>()
+            {
+                new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "User1"
+                },
+                new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "User2"
+                },
+                new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "User3"
+                }
+            };
+
+            context.Users.AddRange(users);
+            context.SaveChanges();
         }
     }
 }
