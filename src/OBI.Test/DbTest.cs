@@ -26,6 +26,14 @@ namespace OBI.Test
             SeedDatabase();
         }
 
+        [Test, Order(1)]
+        public void GetAllUsers()
+        {
+            var result = context.Users.ToList();
+
+            Assert.That(result.Count, Is.EqualTo(3));
+        }
+
         [OneTimeTearDown]
         public void CleanUp()
         {
