@@ -32,6 +32,7 @@ namespace OBI.Test
             var result = context.Users.ToList();
 
             Assert.That(result.Count, Is.EqualTo(3));
+            TestContext.Out.WriteLine(string.Format("members of Users: ({0}).", string.Join(", ", result.Select(u => u.Name))));
         }
 
         [OneTimeTearDown]
