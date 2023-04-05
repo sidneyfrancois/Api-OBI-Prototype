@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBI.Data", "src\OBI.Data\OB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBI.Test", "src\OBI.Test\OBI.Test.csproj", "{0C25ECA6-E6BE-47D0-A14B-2D49A46EFB31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBI.Api", "src\OBI.Api\OBI.Api.csproj", "{5F0FE3C6-B89B-4D63-91B4-C126AADB14FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0C25ECA6-E6BE-47D0-A14B-2D49A46EFB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C25ECA6-E6BE-47D0-A14B-2D49A46EFB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C25ECA6-E6BE-47D0-A14B-2D49A46EFB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0FE3C6-B89B-4D63-91B4-C126AADB14FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0FE3C6-B89B-4D63-91B4-C126AADB14FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0FE3C6-B89B-4D63-91B4-C126AADB14FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0FE3C6-B89B-4D63-91B4-C126AADB14FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
