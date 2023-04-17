@@ -5,7 +5,7 @@ using OBI.Data.Context;
 namespace OBI.Api.Controllers
 {
     [ApiController]
-    [Route("v1/user")]
+    [Route("api/v1/user")]
     public class UserController : ControllerBase
     {        
         [HttpGet]
